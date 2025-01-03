@@ -52,12 +52,12 @@ public class CarRentalAgency {
     @Column(name = "gst_no", unique = true, nullable = false)
     private String gstNo;
     
-    @JsonIgnoreProperties("cars")
-    @OneToMany(mappedBy = "carRentalAgency")
-    private List<Car> cars;
+    // @JsonIgnoreProperties("carRentalAgency")
+    // @OneToMany(mappedBy = "carRentalAgency")
+    // private List<Car> cars;
     
     
-    @JsonIgnoreProperties("bookings")
-    @OneToMany(mappedBy = "carRentalAgency")
-    private List<Booking> bookings;
+    // @JsonIgnoreProperties("bookings")
+    // @OneToMany(mappedBy = "carRentalAgency")
+    // private List<Booking> bookings;
 }

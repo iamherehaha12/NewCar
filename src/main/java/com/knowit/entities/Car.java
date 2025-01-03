@@ -2,6 +2,8 @@ package com.knowit.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,9 +32,10 @@ public class Car {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-    @ManyToOne
-    @JoinColumn(name = "agency_id", nullable = false)
-    private CarRentalAgency carRentalAgency;
+    // @JsonIgnoreProperties("cars")
+    // @ManyToOne
+    // @JoinColumn(name = "agency_id", nullable = false)
+    // private CarRentalAgency carRentalAgency;
 
     @Column(name = "daily_rent", nullable = false)
     private double dailyRent;

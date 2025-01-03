@@ -27,9 +27,9 @@ public class Booking {
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    @ManyToOne
-    @JoinColumn(name = "agency_id", nullable = false)
-    private CarRentalAgency carRentalAgency;
+    // @ManyToOne
+    // @JoinColumn(name = "agency_id", nullable = false)
+    // private CarRentalAgency carRentalAgency;
 
     @ManyToOne
     @JoinColumn(name = "car_id", nullable = false)
