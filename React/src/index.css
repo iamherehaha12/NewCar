@@ -5,9 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f8ff; /* Light blue background color */
+  animation: backgroundChange 10s infinite; /* Slow animation */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes backgroundChange {
+  0% { background-color: #f0f8ff; }
+  50% { background-color: #e6e6fa; } /* Light lavender color */
+  100% { background-color: #f0f8ff; }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #007acc; /* Change color on hover */
+}
+
+header a {
+  display: inline-block;
+  padding: 10px 20px;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+header a:hover {
+  background-color: #e6e6fa; /* Light lavender background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }
